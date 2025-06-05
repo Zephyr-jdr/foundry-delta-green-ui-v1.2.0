@@ -1,0 +1,104 @@
+<div id="dg-crt-container">
+  <div id="dg-login-animation">
+    <div id="dg-login-logo-container">
+      <img id="dg-login-logo" src="modules/deltagreen-ui/asset/img/DG_logo.png" alt="Logo">
+    </div>
+    <div id="dg-login-messages">
+      <div class="dg-login-message" data-step="1">ESTABLISHING SECURE CONNECTION TO NETWORK NODE 7734...</div>
+      <div class="dg-login-message" data-step="2">INITIATING CRYPTOGRAPHIC HANDSHAKE PROTOCOL...</div>
+      <div class="dg-login-message" data-step="3">VERIFYING SATELLITE SIGNATURE: [KEYHOLE-11 ORBITAL FEED]</div>
+      <div class="dg-login-message" data-step="4">ACCESS LEVEL ALPHA GRANTED - DECRYPTING FILES...</div>
+      <div class="dg-login-message" data-step="5">INITIALIZING TERMINAL INTERFACE V3.27.11...</div>
+      <div class="dg-login-message" data-step="6">SYSTEM READY - WELCOME OPERATOR [REDACTED]</div>
+    </div>
+    <div id="dg-encryption-key-container">
+      <div id="dg-encryption-key-text">ENCRYPTION KEY: <span id="dg-encryption-key"></span></div>
+    </div>
+  </div>
+  <img id="dg-computer-bg" src="modules/deltagreen-ui/asset/img/BG-sony.png" alt="Computer" style="pointer-events: none;">
+  <div id="dg-crt-screen">
+    <div id="dg-crt-header">
+      <div id="dg-crt-status">LOGGED IN &lt;{{userId}}&gt;</div>
+    </div>
+    <div id="dg-crt-menu">
+      <div class="dg-menu-item" data-view="system">SYSTEM</div>
+      <div class="dg-menu-item" data-view="access">ACCESS</div>
+      <div class="dg-menu-item" data-view="records">RECORDS</div>
+      <div class="dg-menu-item" data-view="mail">MAIL</div>
+      <div class="dg-menu-item" data-view="journal" id="dg-journal-button">JOURNAL</div>
+      <div class="dg-menu-item" data-view="web" id="dg-web-button" style="display: none;">WEB</div>
+      <div class="dg-menu-item" data-view="scene" id="dg-scene-button">SCENE</div>
+      <div class="dg-menu-item" data-view="settings" id="dg-settings-button">SETTINGS</div>
+      <div class="dg-menu-item" data-view="logout" id="dg-logout-button" style="display: none;">LOG OUT</div>
+    </div>
+    <div id="dg-crt-content">
+      <div id="dg-main-panel">
+        <!-- Les vues seront chargées ici -->
+        <div id="dg-view-system" class="dg-view active">
+          <div class="dg-section">
+            <div class="dg-section-title">SYSTEM WARNING</div>
+            <div id="dg-system-warning" style="color: var(--crt-text); border: 1px solid var(--crt-text); padding: 10px; margin-bottom: 20px; font-size: 0.6em; text-align: center;">
+              THIS IS A FEDERAL LAW ENFORCEMENT SYSTEM. UNAUTHORIZED<br>
+              ACCESS IS A FEDERAL CRIME PUNISHABLE PER 18 USC § 1030
+            </div>
+          </div>
+          
+          <div class="dg-section">
+            <div class="dg-section-title">DATABASE ACCESS</div>
+            <ul class="dg-results-list">
+              <li class="dg-result-item" id="dg-search-records-btn">SEARCH RECORDS</li>
+            </ul>
+          </div>
+          
+          <div class="dg-section">
+            <div class="dg-section-title">QUICK ACCESS</div>
+            <div class="dg-agent-info">
+              <div class="dg-agent-label">AGENT:</div>
+              <div class="dg-agent-name" id="dg-current-agent-name">Loading...</div>
+            </div>
+            <button class="dg-button" id="dg-view-agent-sheet">VIEW AGENT FILE</button>
+          </div>
+          
+          <div class="dg-section">
+            <div class="dg-section-title">LAST ENTRIES</div>
+            <ul class="dg-results-list" id="dg-last-entries-list">
+              <!-- Les dernières entrées seront chargées dynamiquement -->
+              <li class="dg-result-item dg-no-entries">No recent entries found</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div id="dg-view-access" class="dg-view">
+          <div class="dg-section">
+            <div class="dg-section-title">AGENT ACCESS</div>
+            <ul class="dg-results-list" id="dg-players-list">
+              <!-- Liste des joueurs générée dynamiquement -->
+            </ul>
+          </div>
+        </div>
+        
+        <div id="dg-view-records" class="dg-view">
+          <!-- Chargé depuis records-view.html -->
+        </div>
+        
+        <div id="dg-view-mail" class="dg-view">
+          <!-- Chargé depuis mail-view.html -->
+        </div>
+        
+        <div id="dg-view-journal" class="dg-view">
+          <!-- Chargé depuis journal-view.html -->
+        </div>
+        
+        <div id="dg-view-scene" class="dg-view">
+          <!-- Chargé depuis scene-view.html -->
+        </div>
+        
+        <div id="dg-view-web" class="dg-view">
+          <!-- Chargé depuis web-view.html -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Le bouton de connexion est maintenant ajouté directement dans le JS -->
