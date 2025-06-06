@@ -2,7 +2,7 @@
   "id": "deltagreen-ui",
   "title": "Delta Green UI",
   "description": "Delta Green UI transforms your Foundry VTT interface into a nostalgic 90s-style CRT computer terminal, specifically designed for Delta Green RPG campaigns. This immersive interface replaces the standard Foundry VTT UI with a retro computer aesthetic featuring scan lines, amber text, and authentic CRT effects. Version 1.2.0 includes enhanced login animation with advanced CRT effects, integrated Web View system for displaying external web pages, optimized interface with improved stability, enhanced Foundry VTT permissions management, and optimized performance for a smoother experience.",
-  "version": "1.2.1",
+  "version": "1.2.0",
   "compatibility": {
     "minimum": "10",
     "verified": "13",
